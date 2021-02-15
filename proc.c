@@ -17,6 +17,7 @@ static char *states[] = {
 };
 
 #ifdef CS333_P3
+//record
 // record with head and tail pointer for constant-time access to the beginning
 // and end of a linked list of struct procs.  use with stateListAdd() and
 // stateListRemove().
