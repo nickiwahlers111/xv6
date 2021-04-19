@@ -10,6 +10,10 @@ struct sleeplock;
 struct stat;
 struct superblock;
 
+#ifdef CS333_P2
+struct uproc;
+#endif
+
 // bio.c
 void            binit(void);
 struct buf*     bread(uint, uint);
@@ -129,6 +133,15 @@ void            printFreeList(void);
 void            printList(int);
 void            printListStats(void);
 #endif // CS333_P3
+
+#ifdef CS333_P2
+int							get_procs(uint, struct uproc*);
+#endif //CS333_P2
+
+#ifdef CS333_P4
+int							setpriority(int, int);
+int							getpriority(int);
+#endif
 
 // swtch.S
 void            swtch(struct context**, struct context*);
